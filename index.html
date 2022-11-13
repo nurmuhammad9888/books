@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Books</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- SITE HEADER START -->
+  <header class="site-header">
+    <div class="container">
+      <div class="navbar mt-4">
+        <div class="logo d-flex align-items-center justify-content-between w-100">
+          <a class="site-logo text-decoration-none d-flex align-items-center" href="index.html">
+            <img class="logo-img" src="./icons/book-icon.svg" alt="site logo">
+            <p class="logo-text ms-1 mb-0">Online<span class="logo-text-book">Books</span></p>
+          </a>
+          <button class="btn-bookmark btn-bookmark-modal bg-transparent" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- SITE HEADER FINISH -->
+  
+  <!-- SITE MAIN START -->
+  <main class="site-main">
+    <!-- HERO SECTION START -->
+    <section class="hero">
+      
+      <div class="container">
+        <div class="form-wrap my-5">
+          <form class="book-form row" action="#" method="get" autocomplete="off">
+            <div class="col-12 col-md-4 mt-4 mt-md-0">
+              <input class="form-control book-search-input" type="search" name="search" placeholder="Search...">
+            </div>
+            <div class="col-12 col-md-4 mt-4 mt-md-0">
+              <input class="form-control book-author-input" type="search" name="search_author" placeholder="Search author...">
+            </div>
+            <div class="col-12 col-md-4 mt-4 mt-md-0">
+              <input class="form-control book-year-input" type="number" name="search_year" placeholder="Search year...">
+            </div>
+            <div class="col-12 col-md-5 col-xxl-6 mt-4">
+              <select class="form-control book-language-categoria" name="language">
+                <option value="all">All</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-5 mt-4">
+              <select class="form-control book-sort" name="sort">
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+                <option value="start-year">Start-year</option>
+                <option value="end-year">End-year</option>
+                <option value="few-sheets">Few sheets</option>
+                <option value="many-sheets">Many sheets</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-1 mt-4 w-100" style="max-width: 110px;">
+              <button class="book-btn btn btn-outline-primary w-100" type="submit">Find</button>
+            </div>
+          </form>
+        </div>
+        <ul class="book-list list-unstyled row justify-content-between">
+          
+        </ul>
+      </div>
+    </section>
+    <!-- HERO SECTION FINISH -->
+    
+    
+  </main>
+  <!-- SITE MAIN FINISH -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="book-save-list list-unstyled row my-4">
+        
+      </ul>
+    </div>
+  </div> 
+  <!-- SITE FOOTER START -->
+  <footer class="site-footer">
+    
+  </footer>
+  <!-- SITE FOOTER FINISH -->
+  <template class="book-template">
+    <li class="book-item rounded mx-auto mx-md-0 my-5 col-12 col-md-6 col-lg-4 col-xl-3">
+      <div class="book-cover">
+        <img class="book-img mx-auto d-block" src="" width="200" height="230" alt="">
+        <h4 class="book-title mt-4 text-info"></h4>
+        <p class="book-author before-style position-relative ps-4"></p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="book-year before-style ps-4 position-relative"></span>
+          <span class="book-page  before-style position-relative"></span>
+          <span class="book-language before-style position-relative"></span>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mt-4 mb-2">
+          <a class="book-wik text-decoration-none d-block before-style position-relative ps-4" href="" target="blank">Wikipedia</a>
+          <button class="btn-bookmark bokkmark"></button>
+        </div>
+        <div class="book-top"></div>
+        <div class="book-right"></div>
+      </div>
+    </li>
+  </template>
+  
+  <!-- BOOKMARK SAVE TEMPLATE  -->
+  <template class="book-save-template">
+    <li class="book-item book-save rounded mx-auto mx-md-0 col-12">
+      <div class="book-cover book-save-cover">
+        <img class="book-img mx-auto d-block" src="images/a-Dolls-house.jpg" width="150" height="180" alt="">
+        <h4 class="book-title book-title-remov fs-5 mt-2 text-info">Things Fall Apart</h4>
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <p class="book-author before-style fs-6 mb-1 position-relative ps-4">Chinua Achebe</p>
+          <button class="btn-bookmark btn-dell-bookmark bg-transparent"></button>
+        </div>
+        <div class="book-top"></div>
+        <div class="book-right"></div>
+      </div>
+    </li>
+  </template>
+  <!-- scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="/js/books.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

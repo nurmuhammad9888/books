@@ -1,0 +1,147 @@
+body::-webkit-scrollbar {
+    width: 1em;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+    background: #d4c6c6;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+.book-item{
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    height: 100%;
+    min-height: 450px;
+}
+.book-save{
+    margin: 30px 0;
+    max-width: 200px;
+    height: 100%;
+    min-height: 260px;
+}
+.before-style::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.book-year::before {
+    left: 0;
+    background-image: url("../icons/year.svg");
+}
+.book-page::before {
+    background-image: url("../icons/pages.svg");
+}
+.book-language::before {
+    background-image: url("../icons/language.svg");
+}
+.book-wik::before{
+    left: 0;
+    background-image: url("../icons/icons8-wikipedia.svg");
+}
+.book-author::before{
+    left: -2px;
+    background-image: url("../icons/author.svg");
+}
+.book-author{
+    font-size: 18px;
+}
+.logo-text {
+    font-size: 22px;
+    color: #6C7590;
+}
+.logo-text-book {
+    color: #F0742D;
+}
+.book-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 490px;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px #999;
+    border-bottom-right-radius: 2px;
+    background-color: #eff0e8;
+    z-index: 1;
+}
+.book-save-cover{
+    height: 280px;
+    margin: 0 20px;
+    padding: 10px 10px 10px 20px;
+}
+.offcanvas-end{
+    width: 280px;
+}
+.book-cover:before {
+    border-left: 10px solid #535353;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+}
+.book-top {
+    background-color: #dad8d8;
+    border-left: 5px solid #818080;
+    border-top: 2px solid #868282;
+    box-shadow: 1px 0px 2px rgb(199, 188, 188);
+    height: 8px;
+    left: 5px;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    transform: skew(-45deg, 0deg);
+}
+.book-right {
+    background-color: #EEEEEE;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 2px solid #dad8d8;
+    box-shadow: 1px 0px 1px rgb(155, 139, 139);
+    height: 100%;
+    position: absolute;
+    right: -10px;
+    top: -4px;
+    width: 11px;
+    transform: skew(0deg, -45deg);;
+}
+.btn-bookmark{
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-image: url("../icons/bookmark.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn-bookmark-show{
+    background-image: url("../icons/heart.svg");
+}
+.btn-dell-bookmark{
+    background-image: url("../icons/rectangle-xmark.svg");
+}
+.btn-bookmark-modal{
+    background-image: url("../icons/book-bookmark.svg");
+}
+.book-title{
+    text-transform: capitalize;
+}
+.book-author{
+    text-transform: capitalize;
+}
+.book-title-remov{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: capitalize;
+}
