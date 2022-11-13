@@ -126,10 +126,10 @@ function sortFunc(array, sortval){
     if(sortval.value == "end-year"){
         array.sort((a,b) => parseFloat(b.year)  - parseFloat(a.year))
     }
-    if(sortval.value == "few-sheets"){
+    if(sortval.value == "less-pages"){
         array.sort((a,b) => a.pages - b.pages)
     }
-    if(sortval.value == "many-sheets"){
+    if(sortval.value == "many-pages"){
         array.sort((a,b) => b.pages - a.pages)
     }
 }
